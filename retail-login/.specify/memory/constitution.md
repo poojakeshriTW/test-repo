@@ -1,50 +1,40 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Retail Login Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Clean Code and Maintainability
+All implementation work must prioritize clarity, readability, and long-term maintainability. Code must use meaningful names, small focused functions, consistent structure, and straightforward logic. Features should be decomposed into reusable, testable units rather than monolithic blocks. Unnecessary complexity, dead code, and duplication are not allowed. Every change must be easy to understand without requiring guesswork.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Responsive Design and User-Centered Experience
+The user experience must be mobile-first, responsive, and accessible across common screen sizes and devices. Layouts must adapt gracefully to smaller viewports without sacrificing readability or usability. The interface should be visually consistent, lightweight, and optimized for practical retail login interactions. Accessibility considerations such as readable contrast, clear focus states, and semantic markup are mandatory.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Test-First Unit Testing Only
+Unit tests are required for behavior that is implemented. Tests must be written to validate logic and UI behavior at the component or function level before final implementation is considered complete. End-to-end, integration, and browser automation tests are explicitly out of scope unless the project explicitly requires them. The default standard is focused, deterministic unit tests that verify the expected behavior without unnecessary setup.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Simplicity Before Scope Expansion
+Features must be implemented in the smallest reasonable form that satisfies the requirement. Any added complexity must be justified by a demonstrated user or technical need. Avoid speculative abstractions, over-engineering, and unnecessary dependencies. Prefer straightforward solutions that remain easy to debug and extend.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Quality Gates and Review Discipline
+All work must be reviewed against these principles before it is considered complete. Code quality, responsive behavior, and test coverage must be checked in the same review pass. If a change conflicts with maintainability, responsiveness, or the unit-test-only standard, it is not acceptable.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Additional Constraints
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+- Use modern, maintainable frontend patterns appropriate to the project stack.
+- Favor component composition over duplication.
+- Ensure all UI states are understandable and usable on both mobile and desktop screens.
+- Keep styling and layout decisions intentional, simple, and consistent.
+- Write only unit tests; do not add broader test frameworks or testing layers unless explicitly required by the task.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+1. Start by clarifying the required behavior and scope.
+2. Implement the smallest robust solution that meets the requirement.
+3. Add focused unit tests that validate the expected behavior.
+4. Check the result for clean code quality and responsive behavior.
+5. Confirm the change aligns with this constitution before completion.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes ad hoc implementation shortcuts and unreviewed complexity. Any change to project behavior, structure, or standards must remain consistent with clean code, responsive design, and the unit-test-only approach. Exceptions require explicit documentation and clear justification.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-10-09 | **Last Amended**: 2026-10-09
